@@ -1,0 +1,33 @@
+{
+  "name": "dream-car-builder",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Build a car part by part, watch it change, and get real performance numbers.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "oxlint src",
+    "format": "prettier --write \"src/**/*.{js,jsx,css}\"",
+    "test": "npm run lint && npm run test:stats && npm run test:logic && npm run test:render && npm run test:dom",
+    "test:stats": "node scripts/checkStats.mjs",
+    "test:logic": "node scripts/logicCheck.mjs",
+    "test:render": "node scripts/run.mjs scripts/smoke.mjs",
+    "test:dom": "node scripts/run.mjs scripts/domCheck.mjs",
+    "car:png": "node scripts/run.mjs scripts/renderCar.mjs"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.9.1"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@vitejs/plugin-react": "^5.2.0",
+    "esbuild": "^0.28.2",
+    "oxlint": "^1.19.0",
+    "prettier": "^3.4.2",
+    "vite": "^7.3.6"
+  }
+}

@@ -1,0 +1,118 @@
+/**
+ * WHEELS
+ * ------
+ * Wheels are mostly UNSPRUNG MASS + looks. Tyres do the gripping.
+ *
+ *  weight     kg delta for the full set vs OEM steel/alloy baseline
+ *  grip       small contribution (wider wheel = wider tyre fits)
+ *  handling   unsprung mass matters more than total mass for response
+ *  style      pure cosmetics score
+ *  spokes/design  -> read by the SVG renderer to actually DRAW the wheel
+ */
+
+export const wheels = [
+  {
+    id: 'oem',
+    name: 'OEM Alloys',
+    short: 'OEM',
+    weight: 0,
+    grip: 0,
+    handling: 0,
+    comfort: 0,
+    style: 0,
+    price: 0,
+    design: 'mesh',
+    spokes: 10,
+    faceColor: '#8a9099',
+    lipColor: '#6f757d',
+    sizeUp: 0,
+    blurb: 'Whatever it left the factory with. Heavy, unremarkable, free.',
+  },
+  {
+    id: 'bbs-lm',
+    name: 'BBS LM',
+    short: 'BBS LM',
+    weight: -9,
+    grip: 1.0,
+    handling: 0.7,
+    comfort: -0.2,
+    style: 3.4,
+    price: 320000,
+    design: 'mesh',
+    spokes: 20,
+    faceColor: '#c9ccd1',
+    lipColor: '#b08d4f',
+    sizeUp: 1,
+    blurb: 'Gold lip, polished face. The most quietly respected wheel ever made.',
+  },
+  {
+    id: 'te37',
+    name: 'Volk TE37',
+    short: 'TE37',
+    weight: -14,
+    grip: 0.9,
+    handling: 1.2,
+    comfort: -0.4,
+    style: 3.2,
+    price: 380000,
+    design: 'spoke',
+    spokes: 6,
+    faceColor: '#c8542f',
+    lipColor: '#a84828',
+    sizeUp: 1,
+    blurb: 'Six forged spokes. Absurdly light, absurdly expensive, absurdly iconic.',
+  },
+  {
+    id: 'oz-superleggera',
+    name: 'OZ Superleggera',
+    short: 'OZ SL',
+    weight: -11,
+    grip: 0.8,
+    handling: 1.0,
+    comfort: -0.2,
+    style: 2.8,
+    price: 290000,
+    design: 'spoke',
+    spokes: 10,
+    faceColor: '#3a3f46',
+    lipColor: '#2b2f35',
+    sizeUp: 1,
+    blurb: 'Ten thin spokes, featherweight. Looks right on absolutely everything.',
+  },
+  {
+    id: 'rotiform',
+    name: 'Rotiform Deep Dish',
+    short: 'Rotiform',
+    weight: 8,
+    grip: 0.4,
+    handling: -0.4,
+    comfort: -0.6,
+    style: 3.0,
+    price: 260000,
+    design: 'dish',
+    spokes: 5,
+    faceColor: '#d5d8dc',
+    lipColor: '#9aa0a7',
+    sizeUp: 2,
+    blurb: 'Enormous dish, poke for days. Chosen with the eyes, not the stopwatch.',
+  },
+  {
+    id: 'magnesium-race',
+    name: 'Forged Magnesium Race',
+    short: 'Mg Race',
+    weight: -22,
+    grip: 1.4,
+    handling: 1.8,
+    comfort: -1.2,
+    style: 2.2,
+    price: 620000,
+    design: 'spoke',
+    spokes: 5,
+    faceColor: '#6d6a5f',
+    lipColor: '#57544b',
+    sizeUp: 1,
+    blurb: 'Centre-lock magnesium. The single biggest handling-per-kg upgrade here.',
+  },
+]
+
+export const getWheel = (id) => wheels.find((w) => w.id === id) ?? null

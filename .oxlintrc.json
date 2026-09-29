@@ -1,0 +1,11 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "error"
+  },
+  "plugins": ["react", "import"],
+  "env": {
+    "browser": true,
+    "es2024": true
+  }
+}
